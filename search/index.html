@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Search</title>
-    </head>
-    <body>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Search</title>
+</head>
+
+<body>
+    <div class = flex-container>
+        <img src="google icon.png" alt="Google Icon">
         <form action="https://www.google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
-    </body>
+        <input class = searchbar type="text" name="q">
+    <div class = button-container>
+        <input class = button type="submit" value="Google Search">
+        </form>   
+            <form action="https://doodles.google">
+            <input type="hidden" name="/">
+            <input class = button type="submit" value="I'm Feeling Lucky">
+            </form>
+    </div>   
+    </div>
+
+</body>
 </html>
+
