@@ -1,11 +1,51 @@
+    body 
+    {
+        color: #000;
+        margin: 0;
+        background-color: #fff;
+        font-family: arial,sans-serif;
+        display: flex;
+        flex-direction: column;
+        max-width: none;
+    }
+
+/* Hyperlinks */
+    a
+    {
+        color: #1f1f1f;
+        font-family: arial,sans-serif;
+        line-height: 24px;
+        padding: 14px 10px;
+        font-size: 13px;
+        text-decoration: none;
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    
+    a:hover
+    {
+        text-decoration: underline; 
+    }
+
+    .link-container
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+
+/* Main elements of Google Search */ 
     .flex-container 
     {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         height: 100vh;
         position: relative;
+        padding-top: 350px;
     }
     .button-container 
     {
@@ -14,7 +54,6 @@
         justify-content: center; 
         margin-top: 10px; 
     }
-
     .searchbar
     {
         text-align: left;
@@ -27,7 +66,6 @@
         padding: 14px 24px;
         width: 80%;
         max-width: none;
-
     }
 
     .searchbar:hover
@@ -59,18 +97,14 @@
         border:#dfe1e5;
     }
 
-    body
+    section 
     {
-        color: #000;
-        margin: 0;
         display:flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-color: #fff;
-        font-family: arial,sans-serif;
     }
-
+ 
     img 
     {
         width: 90%;
