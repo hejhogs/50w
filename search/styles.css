@@ -109,5 +109,19 @@
     {
         width: 90%;
         max-width: 300px;
-        margin-bottom: 20px;
+        margin-bottom: 0;
+    }
+
+    .words
+    {
+        color: #4285f4;
+        font: 16px;
+        font-family: arial, sans-serif;
+        position: relative;
+        padding: 0;
+        bottom: 0;
+        white-space: nowrap;    
+        bottom: 20px;
+        left: 230px;
+    
     }
