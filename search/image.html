@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Search</title>
+</head>
+
+<body>
+        <div class = link-container>
+    <!-- Hyperlinks to Google Search, Google Advanced Search -->
+    <a href = index.html>Search</a>
+    <a href = advanced.html>Advanced</a>
+        </div>
+    
+    <!-- Main elements of Google Image Search -->
+    <section>
+        <div class = flex-container>
+            <img src="googleicon.png" alt="Google Image Icon">
+            <form action="https://images.google.com/">
+            <span class = words>Images</span>
+            <input class = searchbar type="text" name="q" id="searchquery">
+            <div class = button-container>
+                <input class = button type="submit" value="Search">
+            </form>
+        </div>   
+        </div>
+        <!-- Image Search function -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function()
+        {
+            document.querySelector('form').addEventListener("submit", function(event) 
+            { 
+            event.preventDefault();
+            const query = document.getElementById("searchquery").value;
+            window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&udm=2`;
+            });
+        });
+        </script>
+    </section>
+
+</body>
+</html>
+
