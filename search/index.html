@@ -21,16 +21,23 @@
         <div class = flex-container>
             <img src="googleicon.png" alt="Google Icon">
             <form action="https://www.google.com/search">
-            <input class = searchbar type="text" name="q">
+            <input class = searchbar type="text" name="q" id="searchquery">
         <div class = button-container>
             <input class = button type="submit" value="Google Search">
+            <button class="button" type="button" id="lucky">I'm Feeling Lucky</button>
             </form>   
-                <form action="https://doodles.google">
-                <input type="hidden" name="/">
-                <input class = button type="submit" value="I'm Feeling Lucky">
-                </form>
         </div>   
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function()
+        {
+            document.getElementById('lucky').addEventListener("click", function() 
+            { 
+            const query = document.getElementById("searchquery").value;
+            window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI=I`;
+            });
+        });
+        </script>
     </section>
 
 </body>
