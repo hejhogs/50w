@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Search</title>
+</head>
+    
+<body>
+        <div class="link-container">
+    <img class="advanced" src="googleicon.png" alt="Google Icon">
+    <!-- Hyperlinks to Google Search, Google Images -->
+    <a href = index.html>Search</a>
+    <a href = image.html>Images</a>
+        </div>
+        <p class="advanced">Advanced Search</p>
+        <br>
+        <p style ="margin-left: 5%">Find pages with...</p>
+        <br>
+
+        <!-- Layout for queries in Advanced Search -->
+    <form id ="advancedsearch">
+        <div class="container1">
+            <label for="all">all these words:</label>
+            <input class ="advinput" type="text" id="all">
+        </div>
+
+        <div class="container2">
+            <label for="exact">this exact word or phrase:</label>
+            <input class ="advinput" type="text" id="exact">
+        </div>
+
+        <div class="container3">
+            <label for="any">any of these words:</label>
+            <input class ="advinput" type="text" id="any">
+        </div>
+
+        <div class="container4">
+            <label for="none">none of these words:</label>
+            <input class ="advinput" type="text" id="none">
+        </div>
+
+        <div class="advbutton-container">
+            <button class="advbutton" type="submit">Advanced Search</button>   
+        </div>
+    </form>
+    <!-- Script for filtered search -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function()
+    {
+        document.getElementById('advancedsearch').addEventListener("submit", function(event) 
+        { 
+        event.preventDefault(); 
+        const all = document.getElementById("all").value; 
+        const exact = document.getElementById("exact").value;
+        const any = document.getElementById("any").value;
+        const none = document.getElementById("none").value;
+
+        window.location.href = `https://www.google.com/search?as_q=${encodeURIComponent(all)}&as_epq=${encodeURIComponent(exact)}&as_oq=${encodeURIComponent(any)}&as_eq=${encodeURIComponent(none)}&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=&as_occt=any&as_filetype=&tbs=`;
+        });
+    });
+    </script>
+
+</body>
+</html>
+
